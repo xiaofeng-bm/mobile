@@ -1,0 +1,50 @@
+/**index.wxss**/
+page {
+  width: 100%;
+  height: 100%;
+}
+.search-wrapper {
+  background-color: #ffffff;
+}
+.container .van-dropdown-menu {
+  box-shadow: none;
+}
+
+.btn-wrapper {
+  display: flex;
+}
+.btn-wrapper .van-button  {
+  
+}
+
+.main-container {
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+.main-container .content-item {
+  margin: 10px 20px;
+  border-radius: 5px;
+  background: #ffffff;
+  padding: 20px;
+  color: #999999;
+  display: flex;
+}
+.main-container .content-item .item-left {
+  flex: 2;
+}
+.main-container .content-item .item-right {
+  flex: 1;
+  font-size: 12px;
+}
+.main-container .content-item .item-right .avatar-wrapper {
+  margin: 10px 0px;
+}
+.main-container .content-item .conference-icon {
+  font-size: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-container .content-item view {
+  padding: 5px 0px;
+}

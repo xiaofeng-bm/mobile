@@ -1,0 +1,9 @@
+<!--pages/login/index.wxml-->
+<view class="login-container">
+  <view class="logo-img">
+    <van-image width="200px" height="300px" src="/static/logo.png" />
+  </view>
+  <van-button custom-class="login-btn" open-type="getUserInfo" type="primary" bind:getuserinfo="toWeixinLogin">微信登录1</van-button>
+
+  <van-button custom-class="login-btn" type="info" bind:click="toUserLogin">账号登录</van-button>
+</view>

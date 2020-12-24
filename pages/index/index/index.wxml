@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="container">
+  <van-sticky>
+    <van-grid column-num="3">
+      <van-grid-item wx:for="{{ header_list }}" icon="{{ item.icon }}" text="{{ item.text }}" wx:key="text" />
+    </van-grid>
+    <van-row custom-class="search-wrapper">
+      <van-col span="5">
+        <van-dropdown-menu size="mini">
+          <van-dropdown-item value="{{ sort_info.user }}" options="{{ sort_info.user_list }}" />
+        </van-dropdown-menu>
+      </van-col>
+      <van-col span="5">
+        <van-dropdown-menu size="mini">
+          <van-dropdown-item value="{{ sort_info.start_time }}" options="{{ sort_info.start_list }}" />
+        </van-dropdown-menu>
+      </van-col>
+      <van-col span="5">
+        <van-dropdown-menu size="mini">
+          <van-dropdown-item value="{{ sort_info.city }}" options="{{ sort_info.city_list }}" />
+        </van-dropdown-menu>
+      </van-col>
+
+      <van-col span="9">
+        <van-search placeholder="搜索 ..."></van-search>
+      </van-col>
+    </van-row>
+
+  </van-sticky>
+
+  <van-skeleton row="3" loading="{{ loading }}">
+    <view class="main-container">
+      <view class="content-item" wx:for="{{ content_list }}" wx:key="id" align="top">
+        <view span="8" class="item-left">
+          <view>{{ item.title }}</view>
+          <view>{{ item.principal }}</view>
+          <view>
+            <text>{{ item.province }}</text>
+            <text>{{ item.city }}</text>
+          </view>
+          <view>{{ item.hotel }}</view>
+        </view>
+        <view span="4" class="item-right">
+          <view>{{ item.countdown }}</view>
+          <view class="display-flex justify-content-center">
+            <van-icon name="/static/icon/会议.svg" size="40px"></van-icon>
+          </view>
+          <view class="btn-wrapper">
+            <van-button type="info" size="mini" round>标注</van-button>
+            <van-button class="margin-left-10" type="info" size="mini" round>评价</van-button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-skeleton>
+
+</view>

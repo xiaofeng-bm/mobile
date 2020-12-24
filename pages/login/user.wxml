@@ -1,0 +1,20 @@
+<!--pages/login/user.wxml-->
+<view class="login-container">
+  <view class="logo-img">
+    <van-image width="200px" height="300px" src="/static/logo.png" />
+  </view>
+
+  <van-field value="{{ user_info.username }}" slot="title" left-icon="user-circle-o" clearable placeholder="请输入用户名" />
+  <view class="password-container">
+    <van-field value="{{ user_info.password }}" type="{{ show_password ? 'text' : 'password' }}" slot="title"
+      placeholder="请输入密码" focus="{{ pass_focus }}">
+      <van-icon slot="left-icon" name="/static/icon/password.svg" size="20"></van-icon>
+    </van-field>
+    <van-switch class="show-password" checked="{{ show_password }}" bind:change="onChange" size="20px" />
+  </view>
+
+  <van-button custom-class="login-btn" loading="{{ btn_loading }}" type="info" bind:click="handleLogin">登录</van-button>
+
+
+
+</view>
